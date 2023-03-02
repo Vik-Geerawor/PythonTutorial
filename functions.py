@@ -90,11 +90,16 @@ def arb_no_of_kwargs(a, **kwargs):
         print(f'kwargs is a dict of keyword args = {kwargs}')
 
 
-def lambdas(a, b, op):
-    if op == '+':
-        return lambda a, b: a + b
-    elif op == '-':
-        return lambda a, b: a - b
+def power_of(n):
+    """
+    n - is the exponent and is fixed at the point of the function call
+    The function returns another function with the ability to calculate
+    the power of the fixed value of n, e.g. 2 (power of 2)
+    x - is the variable which is then passed to the above function to calc
+    it's power of the fixed value of n, i.e. 3 to the power of 2
+
+    """
+    return lambda x: x ** n
 
 
 def main():
@@ -121,5 +126,9 @@ def main():
     # arb_no_of_args(2, 10, 20, 30)
     # arb_no_of_args(3)
 
-    arb_no_of_kwargs(5)
-    arb_no_of_kwargs(5, tens=10, twenty=20, thirty=30)
+    # arb_no_of_kwargs(5)
+    # arb_no_of_kwargs(5, tens=10, twenty=20, thirty=30)
+
+    to_the_power_of_2 = power_of(2)
+    x = to_the_power_of_2(3)
+    print(x)
