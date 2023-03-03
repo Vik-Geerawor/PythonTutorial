@@ -26,12 +26,12 @@ def fib(n):
     while a < n:
         # print(f'{a}', end=' ')
         result.append(a)
-        a, b = b, a+b
+        a, b = b, a + b
     # print()
     return result
 
 
-def f_default_arg(a, b=1):              # NOTE: Polymorphism
+def f_default_arg(a, b = 1):              # NOTE: Polymorphism
     """
     Function with
     - 1 mandatory positional param - a
@@ -129,6 +129,6 @@ def main():
     # arb_no_of_kwargs(5)
     # arb_no_of_kwargs(5, tens=10, twenty=20, thirty=30)
 
-    to_the_power_of_2 = power_of(2)
+    to_the_power_of_2 = power_of(2)     # NOTE: lambda func returned
     x = to_the_power_of_2(3)
     print(x)
