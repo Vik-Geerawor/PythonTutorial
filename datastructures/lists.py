@@ -1,4 +1,9 @@
-def my_list():
+def list_demo():
+    """
+    Usage: contains mutable homogeneous sequence of elements as a list
+
+    """
+
     shopping_list = ['banana', 'apple', 'coconut', 'mango', 'strawberry']
     print(f"My orig list: {shopping_list}")
 
@@ -20,7 +25,6 @@ def my_list():
     favourites.index('coconut')
     print(f"Index of coconut: {favourites}")
 
-    idx_apple = favourites.index('apple')
     print(
         f"Popped out {favourites.pop(favourites.index('apple'))}: {favourites}")
 
@@ -53,5 +57,5 @@ def list_comprehension():
 
 
 def main():
-    # my_list()
+    # list_demo()
     list_comprehension()
