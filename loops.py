@@ -40,8 +40,36 @@ def fibonacci_series():
         a, b = b, a + b
 
 
+def advanced_loops():
+    """
+    Prerequisites: data structures
+    """
+
+    # looping through a dict
+    my_dict = {'id': 2, 'name': "Vik", 'email': "vik.geerawor@email.com"}
+    for k, v in my_dict.items():
+        print(f"{k}: {v}")
+
+    my_list = ['tic', 'tac', 'toe']
+    for i, v in enumerate(my_list):
+        print(f"{i}. {v}")
+
+    for item in reversed(my_list):
+        print(f"{item}")
+
+    shopping_list = ['banana', 'apple', 'coconut', 'mango', 'strawberry']
+    print(f"Shopping list: {shopping_list}")
+    # NOTE: Not in place
+    print(f"Shopping list (sorted): {sorted(shopping_list)}")
+
+    shopping_list.append('banana')
+    print(f"Shopping list (2 bananas): {shopping_list}")
+    print(f"Shopping list (dedupe): {sorted(set(shopping_list))}")
+
+
 def main():
-    fibonacci_series()
-    for_loop()
-    break_statement()
-    continue_statement()
+    # fibonacci_series()
+    # for_loop()
+    # break_statement()
+    # continue_statement()
+    advanced_loops()

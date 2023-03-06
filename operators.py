@@ -6,5 +6,21 @@ def arithmetic_ops():
     print(f'5 ** 2 = {5 ** 2} \t# power of')
 
 
+def relational_ops():
+    """
+    Same level of precedence
+    Evaluated from L->R
+    """
+    ...
+
+
+def boolean_ops():
+    """
+    Order of precedence: not -> and -> or
+    short-circult evaluation
+    """
+    ...
+
+
 def main():
     arithmetic_ops()

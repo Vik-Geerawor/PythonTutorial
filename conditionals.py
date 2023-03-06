@@ -57,7 +57,28 @@ def http_client_error(code):
             return 'Unknown Error'
 
 
+def advanced_conditions():
+    """
+    'in' and 'not in' - membership test
+    'is' and 'is not' - checks if 2 objects are really the same object
+    """
+
+    fridge = ['apple', 'mango', 'strawberry']
+    shopping_list = ['banana', 'apple', 'coconut']
+
+    print(f"Fridge: {fridge}")
+    print(f"shopping list: {shopping_list}")
+
+    for item in fridge:
+        if not item in shopping_list:
+            shopping_list.append(item)
+
+    print(f"Fridge: {fridge}")
+    print(f"shopping list (updated): {shopping_list}")
+
+
 def main():
-    if_condition()
-    print(http_error(400))
-    print(http_error_types(404))
+    # if_condition()
+    # print(http_error(400))
+    # print(http_error_types(404))
+    advanced_conditions()
