@@ -31,7 +31,7 @@ def fib(n):
     return result
 
 
-def f_default_arg(a, b = 1):              # NOTE: Polymorphism
+def f_default_arg(a, b=1):              # NOTE: Polymorphism
     """
     Function with
     - 1 mandatory positional param - a
@@ -123,12 +123,14 @@ def main():
 
     # combined_example(2, standard=3, kwd_only=4)
 
-    # arb_no_of_args(2, 10, 20, 30)
     # arb_no_of_args(3)
+    # args = [10, 20, 30]
+    # arb_no_of_args(2, *args)          # NOTE: *args <- list as arg
 
     # arb_no_of_kwargs(5)
-    # arb_no_of_kwargs(5, tens=10, twenty=20, thirty=30)
+    kwarg = {'tens': 10, 'twenty': 20, 'thirty': 30}
+    arb_no_of_kwargs(5, **kwarg)        # NOTE: Amazing..! dictionary as arg
 
-    to_the_power_of_2 = power_of(2)     # NOTE: lambda func returned
-    x = to_the_power_of_2(3)
-    print(x)
+    # to_the_power_of_2 = power_of(2)   # NOTE: lambda func returned
+    # x = to_the_power_of_2(3)
+    # print(x)
