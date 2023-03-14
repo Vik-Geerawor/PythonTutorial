@@ -67,7 +67,7 @@ def advanced_loops():
     print(f"Shopping list (dedupe): {sorted(set(shopping_list))}")
 
 
-def main():
+if __name__ == '__main__':
     # fibonacci_series()
     # for_loop()
     # break_statement()

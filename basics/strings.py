@@ -13,5 +13,5 @@ def strings():
     print(f'strings are arrays - name[0] = {name[0]}')
 
 
-def main():
+if __name__ == '__main__':
     strings()

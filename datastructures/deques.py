@@ -15,5 +15,5 @@ def my_deque():
     print(f"Pop guest: {queue.popleft()}")
 
 
-def main():
+if __name__ == '__main__':
     my_deque()

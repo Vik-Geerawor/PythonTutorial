@@ -1,0 +1,4 @@
+Line 1 written in RW mode
+Line 2 written in RW mode
+Line 3 written in RW mode
+Line 4 written in RW mode

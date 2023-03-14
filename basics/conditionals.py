@@ -77,7 +77,7 @@ def advanced_conditions():
     print(f"shopping list (updated): {shopping_list}")
 
 
-def main():
+if __name__ == '__main__':
     # if_condition()
     # print(http_error(400))
     # print(http_error_types(404))

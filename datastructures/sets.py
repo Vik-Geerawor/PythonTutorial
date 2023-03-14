@@ -14,5 +14,5 @@ def set_demo():
     print(f"a ^ b (uni - inter) = {a ^ b}")   # a or b, but not both
 
 
-def main():
+if __name__ == '__main__':
     set_demo()

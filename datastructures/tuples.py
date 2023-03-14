@@ -17,5 +17,5 @@ def tuple_demo():
     print(f"data: {data}")
 
 
-def main():
+if __name__ == '__main__':
     tuple_demo()

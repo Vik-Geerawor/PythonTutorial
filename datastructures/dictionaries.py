@@ -28,7 +28,7 @@ def dict_comprehension():
     print(f"Times 2 table: {times_2_table}")
 
 
-def main():
+if __name__ == '__main__':
     # dict_demo()
     # dict_func()
     dict_comprehension()

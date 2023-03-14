@@ -102,7 +102,7 @@ def power_of(n):
     return lambda x: x ** n
 
 
-def main():
+if __name__ == '__main__':
     # result = fib(100)
     # print(result)
 

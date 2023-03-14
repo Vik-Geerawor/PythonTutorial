@@ -56,6 +56,6 @@ def list_comprehension():
     print(f"Zip: {transposed}")
 
 
-def main():
+if __name__ == '__main__':
     # list_demo()
     list_comprehension()

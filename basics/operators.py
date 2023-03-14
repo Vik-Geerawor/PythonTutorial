@@ -22,5 +22,5 @@ def boolean_ops():
     ...
 
 
-def main():
+if __name__ == '__main__':
     arithmetic_ops()
