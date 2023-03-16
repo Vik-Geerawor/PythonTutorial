@@ -2,7 +2,7 @@
 from house.myhouse import DOOR
 
 # get the town name
-from pkg.town.mytown import TOWN        # ERROR: does not work
+from packages.town.mytown import TOWN        # ERROR: does not work
 
 STREET = "Greenwich Way"
 
