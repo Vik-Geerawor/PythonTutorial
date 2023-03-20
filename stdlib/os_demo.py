@@ -1,9 +1,4 @@
 import os
-import shutil
-import glob
-import sys
-import argparse
-import re
 
 
 def os_demo():
