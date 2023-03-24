@@ -1,3 +1,3 @@
-from . import one
-from . import two
-from . import three
+from . import pkga
+from . import pkgb
+from . import pkgc
