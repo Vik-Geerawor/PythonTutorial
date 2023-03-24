@@ -1,7 +1,10 @@
+import traceback
+
+
 def simple_exception():
     try:
         10 * (1/0)
-    except ZeroDivisionError:
+    except ZeroDivisionError as err:
         print("Cannot divide by zero..!")
 
 
@@ -137,8 +140,11 @@ def exception_chaining():
     try:
         1 / 0
     except ZeroDivisionError as err:
-        i = int(err)        # NOTE: Unhandled exception
+        i = int(err)        # NOTE: Unhandled exception, incl in preceding error
         print(f"{err}")
+        print(f"__cause__: {err.__cause__}")
+        if err.__context__:
+            print(f"While handling: {err.__context__}")
 
     print(f"*** END TRY ***")
 
@@ -149,11 +155,22 @@ def finally_clause(file):
     """
     f = None
     try:
-        f = open(file, 'r')
+        with open(file, 'r') as f:
+            pass
     except OSError as err:
         err.add_note("Notes add by Vik")
-        print(f"{err}File does not exist: {f}")
-        print(f"{err=}")
+        # print(f"{err}")
+        # print(f"{err=}")
+        # print(f"File does not exist: {f}")
+
+        # print(f"err.args: {err.args}")
+
+        # if err.__context__:
+        #     print(f"While handling: {err.__context__}")
+
+        tblines = traceback.format_exception(type(err), err, err.__traceback__)
+        tbmsg = ''.join(tblines)
+        print(f"MyTraceback: {tbmsg}")
     else:
         print(f"{f} has {len(f.readlines())} lines")
         if f:
