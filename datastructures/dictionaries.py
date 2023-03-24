@@ -23,12 +23,9 @@ def dict_func():
     print(f"Share price: {share_prices}")
 
 
-def dict_comprehension():
-    times_2_table = {x: x * 2 for x in range(10)}
-    print(f"Times 2 table: {times_2_table}")
+
 
 
 if __name__ == '__main__':
     # dict_demo()
-    # dict_func()
-    dict_comprehension()
+    dict_func()

@@ -29,33 +29,5 @@ def list_demo():
         f"Popped out {favourites.pop(favourites.index('apple'))}: {favourites}")
 
 
-def list_comprehension():
-    # old way
-    # even_numbers = []
-    # for x in range(10):
-    #     if x % 2 == 0:
-    #         even_numbers.append(x)
-
-    # new ways
-    # [<expr> <for clause> [1 or more for and/of if clauses]]
-    new_even_nums = [x for x in range(10) if x % 2 == 0]
-    # return x, for x in range, if x is even
-
-    print(f'Listcomp - even nums: {new_even_nums}')
-
-    matrix = [
-        [1, 2, 3, 4],
-        [5, 6, 7, 8],
-        [9, 10, 11, 12]
-    ]
-
-    transposed = [[row[i] for row in matrix] for i in range(4)]
-    print(f"Netsted listcomp: {transposed}")
-
-    transposed = list(zip(*matrix))
-    print(f"Zip: {transposed}")
-
-
 if __name__ == '__main__':
     # list_demo()
-    list_comprehension()

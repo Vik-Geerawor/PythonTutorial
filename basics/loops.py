@@ -33,11 +33,21 @@ def continue_statement():
         print(f'{n} is odd')
 
 
-def fibonacci_series():
+def while_loop():
     a, b = 0, 1
     while a < 10:
         print(a, end=',')
         a, b = b, a + b
+
+
+def while_advanced():
+    """
+    walrus operator in a while loop
+    """
+    x = 0
+    while (x := x + 1) < 10:        # NOTE: eval expr -> assign -> compare
+        print(x, end=' ')
+    print()
 
 
 def advanced_loops():
@@ -72,4 +82,5 @@ if __name__ == '__main__':
     # for_loop()
     # break_statement()
     # continue_statement()
-    advanced_loops()
+    while_advanced()
+    # advanced_loops()
