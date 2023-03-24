@@ -1,12 +1,12 @@
 class ListTransaction:
-    def __init__(self,thelist):
+    def __init__(self, thelist):
         self.thelist = thelist
 
     def __enter__(self):
         self.workingcopy = list(self.thelist)
         return self.workingcopy
 
-    def __exit__(self,type,value,tb):
+    def __exit__(self, type, value, tb):
         if type is None:
             self.thelist[:] = self.workingcopy
         return False
@@ -14,7 +14,7 @@ class ListTransaction:
 
 if __name__ == "__main__":
 
-    items = [1,2,3]
+    items = [1, 2, 3]
 
     with ListTransaction(items) as working:
         working.append(4)
