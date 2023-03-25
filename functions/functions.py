@@ -121,15 +121,15 @@ if __name__ == '__main__':
     # kwd_only_arg(4)             # ERROR - only kwd arg allowed
     # kwd_only_arg(arg=4)
 
-    # combined_example(2, standard=3, kwd_only=4)
+    combined_example(2, standard=3, kwd_only=4)
 
-    # arb_no_of_args(3)
-    # args = [10, 20, 30]
-    # arb_no_of_args(2, *args)          # NOTE: *args <- list as arg
+    arb_no_of_args(3)
+    args = [10, 20, 30]
+    arb_no_of_args(2, *args)          # NOTE: *args <- list as arg
 
     # arb_no_of_kwargs(5)
-    kwarg = {'tens': 10, 'twenty': 20, 'thirty': 30}
-    arb_no_of_kwargs(5, **kwarg)        # NOTE: Amazing..! dictionary as arg
+    # kwarg = {'tens': 10, 'twenty': 20, 'thirty': 30}
+    # arb_no_of_kwargs(5, **kwarg)        # NOTE: Amazing..! dictionary as arg
 
     # to_the_power_of_2 = power_of(2)   # NOTE: lambda func returned
     # x = to_the_power_of_2(3)
