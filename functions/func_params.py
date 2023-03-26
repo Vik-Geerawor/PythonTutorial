@@ -17,6 +17,10 @@ def kwargs_params(**x: int) -> None:
     print(f"x={x}")
 
 
+def combined_example(pos_only, /, standard, *, kwd_only):
+    print(pos_only, standard, kwd_only)
+
+
 if __name__ == "__main__":
     os.system('clear')
 
