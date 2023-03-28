@@ -12,6 +12,7 @@ def outer_func():
     """
     list1 = []
 
+    # NOTE: Call-back function
     def inner_func(x):
         list1.append(x)
         print(list1)
