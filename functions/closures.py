@@ -4,7 +4,7 @@ import time
 
 def outer_func():
     """
-    inner func needs to be called multiple update the same variable
+    inner func needs to be called multiple times to update the same variable
     critical parts:
     1. the variable/s maintaining the state
     2. the inner function - closure func
@@ -12,7 +12,7 @@ def outer_func():
     """
     list1 = []
 
-    # NOTE: Call-back function
+    # NOTE: Callback function
     def inner_func(x):
         list1.append(x)
         print(list1)
@@ -31,8 +31,8 @@ def make_greetings(names):
     funcs = []
 
     for name in names:
-        funcs.append(lambda: print(f"Hello {name}"))
-        # funcs.append(lambda name=name: print(f"Hello {name}"))    # NOTE: Fix
+        # funcs.append(lambda: print(f"Hello {name}"))
+        funcs.append(lambda name=name: print(f"Hello {name}"))    # NOTE: Fix
 
     # Testing
     # for i in range(len(funcs)):
@@ -44,10 +44,10 @@ def make_greetings(names):
 def main():
     os.system('clear')
 
-    # add_num = outer_func()
-    # add_num(1)
-    # add_num(2)
-    # add_num(3)
+    add_num = outer_func()
+    add_num(1)
+    add_num(2)
+    add_num(3)
 
     a, b, c = make_greetings(['Vik', 'Brian', 'Jeniffer'])
     a()

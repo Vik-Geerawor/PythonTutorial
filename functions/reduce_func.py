@@ -10,6 +10,12 @@ def reduce_v1(nums):
 
 
 def reduce_v2(nums):
+    """
+    the args of the func passed starts with the first 2 values from the list
+    thereafter the result of the func is passed as one of the arg
+    and the 2nd arg is the next item in the list
+    returns a value thus reducing the list
+    """
     r = reduce(lambda a, b: a * b, nums)
     return r
 

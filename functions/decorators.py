@@ -2,10 +2,6 @@ from os import system
 from datetime import datetime
 from functools import wraps
 from utilities.debug import trace
-
-
-# from ..utilities.perfmon import timer
-# NOTE: HowToRun: python -m functions.decorators
 from utilities.perfmon import timer
 
 
@@ -58,7 +54,18 @@ def return_greeting(name):
     return f"Hi {name}"
 
 
+logged = trace('You called {func.__name__}')    # NOTE: Not an f-string
+
+
+@logged
+@timer
+def waste_some_time(num_times):
+    for _ in range(num_times):
+        return sum([i**2 for i in range(10000)])
+
+
 if __name__ == "__main__":
+    # NOTE: HowToRun: python -m functions.decorators
     system('clear')
 
     # f = my_decorator(say_whee)
@@ -67,17 +74,8 @@ if __name__ == "__main__":
 
     # greet("Vik")
 
-    # r = return_greeting("Vik")
-    # print(r)
-
-    # func = None
-    logged = trace('You called {func.__name__}')    # NOTE: Not an f-string
-
-    @logged
-    @timer
-    def waste_some_time(num_times):
-        for _ in range(num_times):
-            return sum([i**2 for i in range(10000)])
+    r = return_greeting("Vik")
+    print(r)
 
     r = waste_some_time(100)
     print(r)
