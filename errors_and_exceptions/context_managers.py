@@ -1,4 +1,10 @@
 class ListTransaction:
+    """
+    Context Manager class must have the below 2 methods:
+    1. __enter__()
+    2. __exit__()
+    """
+
     def __init__(self, thelist):
         self.thelist = thelist
 

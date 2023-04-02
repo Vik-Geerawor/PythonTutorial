@@ -1,7 +1,7 @@
 from os import system
 
 
-def yield_func(max):
+def generator_func(max):
     """
     This is a generator function. Calling it returns a generator object
     To get the values, the __next__() method needs to be invoked by other code
@@ -19,19 +19,22 @@ def yield_func(max):
     # return None           # NOTE: we don't return anything
 
 
-class YieldClass:
+class GeneratorClass:
     def __init__(self, max) -> None:
         self.max = max
 
     def __iter__(self):
+        """
+        This is a generator function, coz it contains yield
+        """
         i = 1
         while i <= self.max:     # NOTE: only the while loop is iterated over
             yield i
             i += 1
 
 
-def demo_yield_func(max):
-    increment = yield_func(max)
+def demo_generator_func(max):
+    increment = generator_func(max)
 
     for num in increment:
         print(num, end=', ')
@@ -43,9 +46,9 @@ def demo_yield_func(max):
     print()
 
 
-def demo_yield_class(max):
+def demo_generator_class(max):
 
-    counter = YieldClass(max)
+    counter = GeneratorClass(max)
 
     for num in counter:
         print(num, end=', ')
@@ -62,7 +65,7 @@ def combining_generators(max):
     Combines to generators into one
     @param: max value
     """
-    yield from yield_func(max)      # NOTE: first generator
+    yield from generator_func(max)      # NOTE: first generator
     yield from range(10, 50, 5)
 
 

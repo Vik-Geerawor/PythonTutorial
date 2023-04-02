@@ -12,7 +12,7 @@ def if_condition():
         print(f'Error')
 
 
-def http_error(status):
+def match_demo(status):
     match status:
         case 400:
             return "Bad request"
