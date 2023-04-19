@@ -1,6 +1,6 @@
 class Reverse:
     """
-    Iterable class which interates backwards
+    Iterable class which iterates backwards
     """
 
     def __init__(self, data) -> None:

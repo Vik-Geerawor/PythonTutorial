@@ -1,0 +1,103 @@
+/* For styling the entire Joplin app (except the rendered Markdown, which is defined in `userstyle.css`) */
+/* ==Interface modifications== */
+#react-root div div div:last-child div input {
+    /* color: black !important; */
+    /* changes the font colour of the note title field */
+}
+
+.note-list div * {
+    /* color: black !important; */
+    /* changes the font colour of the note list */
+}
+
+::-webkit-scrollbar-thumb {
+    /* background: silver */
+    /* sets the colour of the notebook list & note list scrollbars */
+}
+
+.header .title {
+    display: none !important;
+    /* removes the text labels from the main toolbar icons */
+}
+
+/* ==CodeMirror editor modifications== */
+span[role="presentation"] {
+    /* color: black; */
+    /* changes the font colour for the editor text */
+}
+
+.cm-variable-2,
+.cm-meta {
+    /* color: darkred !important; */
+    /* changes the font colour for all lists (.cm-meta controls the square brackets [ ] ) */
+}
+
+.cm-comment {
+    color: #009900 !important;
+    /* changes the font colour for code text*/
+}
+
+.cm-quote {
+    color: darkviolet !important;
+    /* changes the font colour for quoted text*/
+}
+
+.cm-image-marker {
+    color: red;
+    /* changes the font colour for the "!" before displayed image links */
+    font-weight: 900;
+    /* changes the font weight for the "!" before displayed image links */
+}
+
+.cm-link,
+.cm-url {
+    /* .cm-link is everything in the square brackets | .cm-url is the url itself in the round brackets */
+    color: blue !important;
+    /* changes the font colour for links */
+    text-decoration: none !important;
+    /* removes underlining for links */
+}
+
+.cm-tag,
+.cm-attribute {
+    /* .cm-tag is the tag itself such as "<img>" | .cm-attribute is any tag attributes such as "width" or "src" */
+    color: blueviolet !important;
+    /* changes the font colour for HTML tags */
+    font-weight: 500;
+    /* changes the font weight for HTML tags */
+    /* the above are NOT applied if the html text is marked as "code" unless it is in a fenced html code block (```html) */
+}
+
+.cm-hr {
+    color: darkorange !important;
+    /* changes the font colour for horizontal rule markdown "***" */
+    font-weight: 900;
+    /* changes the font weight for horizontal rule markdown "***" */
+}
+
+/* ==ACE editor modifications== */
+.ace_heading {
+    font-weight: bold;
+    /* makes any heading markdown #, ##, ### etc bold so as to stand out */
+}
+
+.ace_content {
+    /* color: black; */
+    /* changes the colour of the ACE editor body text */
+}
+
+.ace_string.ace_strong {
+    /* color: black !important; */
+    font-weight: bold;
+    /* changes the colour and weight of the ACE editor bold marked text */
+}
+
+.ace_support.ace_function {
+    color: #009900 !important;
+    /* changes the colour of the ACE editor code text */
+}
+
+.ace_underline {
+    color: blue;
+    /* changes the colour of any link created using [name](link) format. Links that are just text urls cannot be highlighted as this is not done until rendered in the viewer */
+}

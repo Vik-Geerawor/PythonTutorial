@@ -25,8 +25,12 @@ class Rectangle(Shape):
         return self.length * self.width
 
 
-s = Shape(f"my star")
-print(f"my shape's name: {s.name}")
+if __name__ == '__main__':
+    s = Shape(f"my star")
+    print(f"my shape's name: {s.name}")
 
-r = Rectangle("my_rect", 2, 3)
-print(f"Area of {r.name} = {r.get_area()}")
+    r = Rectangle("my_rect", 2, 3)
+    print(f"Area of {r.name} = {r.get_area()}")
+
+    o = object
+    

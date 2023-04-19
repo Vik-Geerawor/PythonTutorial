@@ -15,6 +15,8 @@ class A:
         return f"{type(self).__name__} at 0x{id(self):x}, size={len(self)}, name={self.name}"
 
 
-a = A('motivation')
+if __name__ == '__main__':
 
-print(a)
+    a = A('motivation')
+
+    print(a)
