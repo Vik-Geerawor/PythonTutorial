@@ -1,4 +1,4 @@
-#!/home/vik/Project/python/PythonTutorial/venv/bin/python
+#!/mnt/data/Projects/python/PythonTutorial/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

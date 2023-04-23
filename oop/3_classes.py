@@ -3,7 +3,7 @@ class A:
     A simple class example
     """
 
-    # NOTE: Constructore
+    # NOTE: Constructor
     def __init__(self, name):
         # NOTE: instance vars
         self.name = name

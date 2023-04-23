@@ -1,36 +1,42 @@
-class Shape:
-    """
-    Description: Inheritance
-    Assumption: 2D shapes only
-    """
+from curses.ascii import isalnum
 
-    # class vars
 
-    def __init__(self, name: str) -> None:
+class Animal:
+
+    def __init__(self, name: str):
+        for c in name:
+            if not isalnum(c):
+                raise ValueError("Name must contain alphanumeric characters only.")
+        
         self.name = name
 
+            
 
-class Rectangle(Shape):
-    """
-    Inherits from class Shape
-    """
-    # class vars
+    def feed(self):
+        print(f"{self.name} is feeding")
 
-    def __init__(self, name: str, length: float, width: float) -> None:
-        super().__init__(name)          # TODO: super() refers to the parent
-        self.length = length
-        self.width = width
+    def move(self):
+        print(f"{self.name} is moving")
 
-    def get_area(self):
-        return self.length * self.width
+
+class Bird(Animal):
+    def __init__(self, name):
+        # NOTE: leverage super()'s validation
+        super().__init__(name)
+
+    # NOTE: Override parent method
+    def feed(self):
+        print(f"{self.name} is pecking.")   # that's how bird feed
+
+    def move(self):
+        print(f"{self.name} is flying.")
 
 
 if __name__ == '__main__':
-    s = Shape(f"my star")
-    print(f"my shape's name: {s.name}")
+    a = Animal("Unknown_")
+    a.feed()
+    a.move()
 
-    r = Rectangle("my_rect", 2, 3)
-    print(f"Area of {r.name} = {r.get_area()}")
-
-    o = object
-    
+    sparrow = Bird("Sparrow")
+    sparrow.feed()
+    sparrow.move()
