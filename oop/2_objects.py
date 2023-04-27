@@ -34,7 +34,7 @@ class Human:
         print(f"Working really hard for {num} hours.")
 
     def __repr__(self) -> str:
-        return f"Human({self.name!r}, {self.dob!r}, {self.gender!r})"
+        return f"Human({self.name}, {self.dob}, {self.gender})"
 
 
 if __name__ == '__main__':
@@ -55,7 +55,6 @@ if __name__ == '__main__':
     print(f"\nObject: {vik}")
     print(f"Vik's state: {vars(vik)}")
 
-    # NOTE: all methods are class methods
     print(f"\nJohn's feed method: {type(john).feed}")
     print(f"Amy's feed method: {type(amy).feed}")
-    print(f"Vik's feed method: {type(vik).feed}")       # ERROR: feed not found
+    # print(f"Vik's feed method: {type(vik).feed}")       # ERROR: feed not found
