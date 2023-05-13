@@ -1,6 +1,7 @@
 """
 Python searches for a module using:
-1. sys.builtin_module_names - var containing a tuple of names of builtin modules
+1. sys.builtin_module_names - var containing a tuple of names of builtin 
+modules
 2. sys.path - var containing a list of directories containing .py files
     a. dir of the input script
     b. PYTHONPATH - python env var similar to PATH env var
@@ -14,7 +15,7 @@ c. cache is ignored (1) for modules loaded from CLI (ii) when there is no .py fi
 dir([<module_name>])
 a. list the names of objects - vars, modules, funcs, etc
 
-from pkg1.pkg2...pkgn import [pkg | module | func | class | var]
+from pkg1.pkg2...pkgn import [pkg | module | func | class | var] as alias
 """
 
 
