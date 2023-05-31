@@ -32,7 +32,7 @@ if __name__ == "__main__":
             working.append(6)
             working.append(7)
             raise RuntimeError("We're hosed!")
-    except RuntimeError:
-        pass
+    except RuntimeError as e:
+        print(e)
 
     print(items)   # Produces [1,2,3,4,5]
