@@ -10,7 +10,7 @@ import sys
 # from datastructures.sets import main
 # from datastructures.dictionaries import main
 # from module.fibo import fib
-from packages.pkga.hello import greet
+from com.alpha.input.read import read_internet
 from utilities.perfmon import timer
 
 

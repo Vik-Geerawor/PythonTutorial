@@ -57,7 +57,7 @@ def demo_quiet_worker():
 
 if __name__ == '__main__':
     system('clear')
-    demo_worker()
+    worker()
     demo_quiet_worker()
 
 
