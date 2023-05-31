@@ -18,3 +18,7 @@ def argparse_demo():
         print(f"\t{i}. {a}")
     print(f"option --lines: {args.lines}")
     print(f"option --port: {args.port}")
+
+
+if __name__ == '__main__':
+    argparse_demo()

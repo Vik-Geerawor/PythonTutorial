@@ -1,3 +1,6 @@
+import sys
+
+
 def read_only(file):
     with open(file, 'r', encoding="utf-8") as f:
         data = f.read()
@@ -69,6 +72,13 @@ def file_seek(file):
         print(f.readline(), end="")
 
 
+def get_fs_encoding():
+    """
+    if filenames are in binary, we pass it as is
+    """
+    print(sys.getfilesystemencoding())      # NOTE: returns OS filename encoding
+
+
 if __name__ == '__main__':
     file = 'files/test.txt'
     # read_only(file)
@@ -78,4 +88,5 @@ if __name__ == '__main__':
     # read_line(file)
     # recommended_reading(file)
     # file_tell(file)
-    file_seek(file)
+    # file_seek(file)
+    get_fs_encoding()

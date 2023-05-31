@@ -1,8 +1,14 @@
-def f_strings():
-    year = 2016
-    event = 'Referendum'
+"""
+format specifier: [char][<|>|^][ |+|-][0|width][,][.precision][type]
+"""
 
-    print(f"Results of the {year} {event}")
+
+def f_strings():
+    y = 3.1415926
+    width = 8
+    precision = 3
+
+    print(f'{y=:{width}.{precision}f}')   # y='   3.142'
 
 
 def format_string():
@@ -19,5 +25,5 @@ def format_string():
 
 
 if __name__ == '__main__':
-    # f_strings()
-    format_string()
+    # format_string()
+    f_strings()
