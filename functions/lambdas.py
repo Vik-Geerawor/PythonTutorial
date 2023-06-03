@@ -33,8 +33,6 @@ def lambda_delayed():
 
 
 def main():
-    os.system('clear')
-
     # power_of_two = power_of(2)
     # a = power_of_two(3)
     # print(a)
@@ -42,4 +40,6 @@ def main():
     lambda_delayed()
 
 
-main()
+if __name__ == '__main__':
+    os.system('clear')
+    main()
