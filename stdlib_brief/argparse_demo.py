@@ -1,7 +1,7 @@
 import argparse
 
 
-def argparse_demo():
+def argparse_demo(argv):
     parser = argparse.ArgumentParser(
         prog='osx',
         description='test std lib modules'
@@ -10,9 +10,9 @@ def argparse_demo():
     parser.add_argument('my_args', nargs='+')       # NOTE: positional args
     parser.add_argument('-l', '--lines', type=int, default=10)  # NOTE: options
     parser.add_argument('-p', '--port', type=int, default=5432)
-    args = parser.parse_args()
+    args = parser.parse_args(args=argv)
 
-    # print(f"{type(args)} - {args}")
+    # print(f"{type(args)=} - {args=}")
     print(f"positional args:")
     for i, a in enumerate(args.my_args, 1):
         print(f"\t{i}. {a}")
@@ -21,4 +21,5 @@ def argparse_demo():
 
 
 if __name__ == '__main__':
-    argparse_demo()
+    import sys
+    argparse_demo(sys.argv[1:])
