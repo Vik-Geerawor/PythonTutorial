@@ -22,7 +22,7 @@ def main_advanced(argv):
     p = argparse.ArgumentParser(description="This is some program")
 
     # A positional argument
-    p.add_argument("infile")        # ERROR
+    p.add_argument("infile")
 
     # An option taking an argument
     p.add_argument("-o", "--output", action="store")
@@ -39,10 +39,10 @@ def main_advanced(argv):
     output = args.output
     debugmode = args.debug
 
-    print(infile, output, debugmode)
+    print(f"{infile=} {output=} {debugmode=}")
 
 
 if __name__ == '__main__':
     import sys
     # main_simple(sys.argv)
-    main_advanced(sys.argv)
+    main_advanced(sys.argv[1:])
