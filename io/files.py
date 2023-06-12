@@ -1,5 +1,5 @@
 import sys
-
+from pathlib import Path
 
 def read_only(file):
     with open(file, 'r', encoding="utf-8") as f:
@@ -79,6 +79,17 @@ def get_fs_encoding():
     print(sys.getfilesystemencoding())      # NOTE: returns OS filename encoding
 
 
+def get_path(file):
+    """
+    Representing a file as an object using pathlib
+    """
+    p = Path(file)
+    for item in dir(p):
+        print(item)
+
+    print(p.__fspath__())
+
+
 if __name__ == '__main__':
     file = 'files/test.txt'
     # read_only(file)
@@ -89,4 +100,5 @@ if __name__ == '__main__':
     # recommended_reading(file)
     # file_tell(file)
     # file_seek(file)
-    get_fs_encoding()
+    # get_fs_encoding()
+    get_path(file)

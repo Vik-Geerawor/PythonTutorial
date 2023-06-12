@@ -9,14 +9,20 @@ import os
 
 
 def show_environ():
-    # for k, v in os.environ.items():
-    #     print(f'{k} = {v}')
+    for k, v in os.environ.items():
+        # print(f'{k} = {v}')
+        if k == 'PYTHONPATH':
+            """
+            run: env PYTHONPATH='/TestPath/PythonTutorial' python io/env_vars.py
+            """
+            print(f"Found it: {k} = {v}")
 
-    user = os.environ['USER']
-    print(user)
+    # user = os.environ['USER']
+    # print(user)
 
-    path = os.environ['PATH']
-    print(path)
+    # path = os.environ['PATH']
+    # print(path)
+
 
 if __name__ == '__main__':
     show_environ()
