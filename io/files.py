@@ -1,6 +1,7 @@
 import sys
 from pathlib import Path
 
+
 def read_only(file):
     with open(file, 'r', encoding="utf-8") as f:
         data = f.read()
@@ -36,10 +37,9 @@ def read_write(file):
 
 def read_line(file):
     with open(file, 'r', encoding="utf-8") as f:
-        line = f.readline()
-        while line:
+        while (line := f.readline()):
             print(line, end="")
-            line = f.readline()
+        print("")
 
 
 def recommended_reading(file):
@@ -49,18 +49,20 @@ def recommended_reading(file):
 
 
 def file_tell(file):
+    """
+    Returns the current position of pointer
+    """
     with open(file, 'r', encoding="utf-8") as f:
-        print(f.tell())
-
-        print(f.readline(), end="")
-        print(f.tell())
-
-        print(f.readline(), end="")
-        print(f.readline(), end="")
-        print(f.tell())
+        while (char := f.read(1)):      # tell starts at 0, after read it's 1
+            if char == '\n':
+                char = r'\n'
+            print(f"{f.tell() - 1:>2d} - {char}")   # hence the -1
 
 
 def file_seek(file):
+    """
+    Seeks to a new file position
+    """
     with open(file, 'r', encoding="utf-8") as f:
         print(f"Starting Position: {f.tell()}")
 
@@ -98,7 +100,7 @@ if __name__ == '__main__':
     # read_write(file)
     # read_line(file)
     # recommended_reading(file)
-    # file_tell(file)
+    file_tell(file)
     # file_seek(file)
     # get_fs_encoding()
-    get_path(file)
+    # get_path(file)
