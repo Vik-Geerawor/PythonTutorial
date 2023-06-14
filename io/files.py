@@ -1,3 +1,4 @@
+import os
 import sys
 from pathlib import Path
 
@@ -64,14 +65,21 @@ def file_seek(file):
     Seeks to a new file position
     """
     with open(file, 'r', encoding="utf-8") as f:
-        print(f"Starting Position: {f.tell()}")
+        # print(f"Cursor Position: {f.tell()}")
 
-        print(f.readline(), end="")
-        print(f"Position: {f.tell()}")
+        # print(f.readline(), end="")
+        # print(f"Position: {f.tell()}")
 
-        f.seek(0)
-        print(f"Position after seek: {f.tell()}")
-        print(f.readline(), end="")
+        # f.seek(0)
+        # print(f"Position after seek: {f.tell()}")
+        # print(f.readline(), end="")
+
+        # print(f"Reading first char: {f.read(1)}")
+        print(f"Cursor Position: {f.tell()}")
+        print(f"f.seek(1, os.SEEK_CUR)")
+        f.seek(1, os.SEEK_CUR)
+        print(f"Reading first char: {f.read(1)}")
+        print(f"Cursor Position: {f.tell()}")
 
 
 def get_fs_encoding():
@@ -92,6 +100,21 @@ def get_path(file):
     print(p.__fspath__())
 
 
+def file_methods(file):
+    f = open(file)
+
+    print(f"{f.closed=}")       # False if open
+    print(f"{f.mode=}")         # r/w mode
+    print(f"{f.name=}")
+    print(f"{f.newlines=}")     # newline char
+    print(f"{f.encoding=}")
+    print(f"{f.errors=}")       # error handling policy
+    print(f"{f.write_through=}")    # True if unbuffered
+
+    f.close()
+
+
+
 if __name__ == '__main__':
     file = 'files/test.txt'
     # read_only(file)
@@ -100,7 +123,8 @@ if __name__ == '__main__':
     # read_write(file)
     # read_line(file)
     # recommended_reading(file)
-    file_tell(file)
+    # file_tell(file)
     # file_seek(file)
     # get_fs_encoding()
     # get_path(file)
+    std_files()
