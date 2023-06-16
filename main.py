@@ -10,8 +10,8 @@ import sys
 # from datastructures.sets import main
 # from datastructures.dictionaries import main
 # from module.fibo import fib
-from com.alpha.input.read import read_internet
-from utilities.perfmon import timer
+from com.alpha.input.read import read_data
+# from utilities.perfmon import timer
 
 
 if __name__ == '__main__':
@@ -22,11 +22,11 @@ if __name__ == '__main__':
 
     # greet()
 
-    @timer
-    def waste_some_time(num_times):
-        for _ in range(num_times):
-            sum([i**2 for i in range(10000)])
+    # @timer
+    # def waste_some_time(num_times):
+    #     for _ in range(num_times):
+    #         sum([i**2 for i in range(10000)])
 
-    waste_some_time(1000)
+    # waste_some_time(1000)
 
-# 6. Modules
+    read_data("file", "file_handle")

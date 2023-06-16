@@ -1,5 +1,5 @@
 """
-exposing only read_data function
+exposing only read_data()
 """
 from .read import *
 

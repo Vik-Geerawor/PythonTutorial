@@ -1,5 +1,5 @@
 import unittest
-from quality_check import average
+from stdlib_brief.testing import average
 
 
 class TestQualityCheck(unittest.TestCase):

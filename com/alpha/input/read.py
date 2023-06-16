@@ -1,15 +1,12 @@
 __all__ = ['read_data']
 
 
-def read_data(source, handle):
+def read_data(source, handle, /):
     if source == "file":
-        from .from_file import read_file
         read_file(source, handle)
     elif source == "database":
-        from .from_db import read_db
         read_db(source, handle)
     elif source == "internet":
-        from .from_internet import read_internet
         read_internet(source, handle)
 
 
