@@ -19,7 +19,11 @@ def main_simple(argv):
 
 
 def main_advanced(argv):
-    p = argparse.ArgumentParser(description="This is some program")
+    # create parser and provide program details
+    p = argparse.ArgumentParser(
+        description="What the program does.",
+        epilog="Text at the bottom for help."
+    )
 
     # A positional argument
     p.add_argument("infile")

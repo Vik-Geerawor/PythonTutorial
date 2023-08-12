@@ -1,5 +1,5 @@
 import unittest
-from stdlib_brief.testing import average
+from quality_control import average
 
 
 class TestQualityCheck(unittest.TestCase):
@@ -15,4 +15,9 @@ class TestQualityCheck(unittest.TestCase):
             average(20, 30, 70)
 
 
-unittest.main()
+
+if __name__ == '__main__':
+    unittest.main()
+
+
+# Ref: https://docs.python.org/3/tutorial/stdlib.html#quality-control
