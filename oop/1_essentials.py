@@ -8,11 +8,11 @@ if __name__ == "__main__":
 
     # NOTE: everything is an object
     a = 1
-    print(f"id: {id(a)}, type of a: {type(a)}, a = {a}")
+    print(f"{id(a)=}, {type(a)=}, {a=}")
 
     a = a + 2
     a = a.__add__(3)    # NOTE: ops are are methods
-    print(f"a = {a}")
+    print(f"{a=}")
 
     if isinstance(a, list):
         print(f"a is a list")
