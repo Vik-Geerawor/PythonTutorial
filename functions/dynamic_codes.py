@@ -1,6 +1,6 @@
 def make_init(*names):
-    parms = ','.join(names)
-    code = f'def __init__(self, {parms}):\n'
+    params = ','.join(names)
+    code = f'def __init__(self, {params}):\n'
     for name in names:
         code += f' self.{name} = {name}\n'
     d = {}
