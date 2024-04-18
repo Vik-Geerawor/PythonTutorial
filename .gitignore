@@ -1,5 +1,6 @@
-*.pyc
 /venv
+/.vscode
+*.pyc
 .installed.cfg
 bin
 develop-eggs
