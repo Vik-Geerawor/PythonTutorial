@@ -80,7 +80,7 @@ def advanced_loops():
 if __name__ == "__main__":
     # fibonacci_series()
     # for_loop()
-    # break_statement()
+    break_statement()
     # continue_statement()
-    while_advanced()
+    # while_advanced()
     # advanced_loops()
