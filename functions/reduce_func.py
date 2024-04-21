@@ -20,7 +20,7 @@ def reduce_v2(nums):
     return r
 
 
-def main():
+if __name__ == '__main__':
     system('clear')
 
     nums = [1, 2, 3, 4, 5]
@@ -34,9 +34,6 @@ def main():
 
     r = reduce_v2(nums)
     print(f"{r}")
-
-
-main()
 
 
 # https://www.youtube.com/watch?v=cKlnR-CB3tk

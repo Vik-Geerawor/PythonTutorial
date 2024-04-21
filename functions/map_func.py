@@ -22,7 +22,8 @@ def square_v2(nums):
     return [x * x for x in nums]        # NOTE: List comp
 
 
-def main():
+if __name__ == '__main__':
+
     system('clear')
 
     nums = [1, 2, 3, 4, 5]
@@ -38,6 +39,3 @@ def main():
     for x in s2:
         print(f"{x}", end=', ')
     print()
-
-
-main()
