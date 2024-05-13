@@ -1,10 +1,10 @@
-import os
+from os import system
 import sys
 import gc
 
 
 if __name__ == "__main__":
-    os.system('clear')
+    system('clear')
 
     # NOTE: everything is an object
     a = 1

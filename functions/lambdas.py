@@ -1,4 +1,4 @@
-import os
+from os import system
 from functools import partial
 
 
@@ -34,7 +34,7 @@ def lambda_delayed():
 
 
 if __name__ == '__main__':
-    os.system('clear')
+    system('clear')
 
     power_of_two = power_of(2)
     a = power_of_two(3)

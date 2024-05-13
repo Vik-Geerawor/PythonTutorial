@@ -114,7 +114,6 @@ def file_methods(file):
     f.close()
 
 
-
 if __name__ == '__main__':
     file = 'files/test.txt'
     # read_only(file)
@@ -127,4 +126,4 @@ if __name__ == '__main__':
     # file_seek(file)
     # get_fs_encoding()
     # get_path(file)
-    std_files()
+    file_methods(file)

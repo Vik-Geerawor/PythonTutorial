@@ -1,6 +1,6 @@
 class StackInheritance(list):
     """
-    Inheritance - attributes and methods are copies to derived class
+    Inheritance - attributes and methods are copied to derived class
     'is a' relation - StackInheritance is a list
     Inheritance from builtin types - use collections --> UserDict, UserList and UserString
     """

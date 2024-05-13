@@ -62,7 +62,7 @@ def demo_generator_class(max):
 
 def combining_generators(max):
     """
-    Combines to generators into one
+    Combines 2 generators into one
     @param: max value
     """
     yield from generator_func(max)      # NOTE: first generator
